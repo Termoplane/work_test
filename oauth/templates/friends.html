@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% block friends %}
+<style>
+    body {
+        background-color: #FEFEFE:
+    }
+</style>
+<h3>Ваш аккаунт:</h3>
+    <div class='container'>
+      <div class='row'>
+        <div class="col-2">
+        </div>
+        <div class="col-6 mb-3 border rounded shadow-sm">
+            <p>{{user.first_name}} {{user.last_name}}</p>
+            <img src={{user.photo_100}}>
+            <a href='https://vk.com/id{{user.id}}'>
+                <button class='btn-primary'>
+                    Перейти на страницу
+                </button>
+            </a>
+        </div>
+        <div class="col-4">
+        </div>
+      </div>
+    </div>
+  
+    <h3>Ваши друзья: </h3>
+    {% for friend in friend_list %}
+    <div class='container'>
+      <div class='row'>
+        <div class="col-2">
+        </div>
+        <div class="col-6 mb-3 border rounded shadow-sm">
+            <p>{{friend.first_name}} {{friend.last_name}}</p>
+            <img src={{friend.photo_100}}>
+            <a href='https://vk.com/id{{friend.id}}'>
+                <button class='btn-primary'>
+                    Перейти на страницу
+                </button>
+            </a>
+        </div>
+        <div class="col-4">
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+
+{% endblock friends %}

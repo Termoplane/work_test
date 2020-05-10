@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block login %}
+    <style>
+        .center { 
+            text-align: center; 
+        }
+        body {
+            background-color: #FEFEFE;
+        }
+    </style>
+    <div class='center justify-content-center mt-5'>
+        <a href="/login/vk-oauth2">
+            <button type='button' name='button' class='btn btn-primary btn-lg'>Авторизоваться с помощью VK</button>
+        </a>
+    </div>
+{% endblock login %}
